@@ -1,10 +1,18 @@
-# Getting Started with Create React App
+# Navigation Bar based on React and Material-UI.(You can use it in your project DIRECTLY NOW! ! !)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was built with [Material-UI](https://material-ui.com/).
 
-## Available Scripts
+## Introducation
 
-In the project directory, you can run:
+This project is an **independent Component** for React Development.
+And this component includes **navigation bar**, **scrolling animations** and **reponsive design**.
+
+
+
+
+
+
+
 
 ### `npm start`
 

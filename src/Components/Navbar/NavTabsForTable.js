@@ -36,7 +36,7 @@ const useStyles = makeStyles(() => ({
   btn: {
       position: 'absolute',
       color: 'black',
-      zIndex: '100000',
+      zIndex: '10000',
   }
 }));
 
@@ -62,7 +62,7 @@ const NavTabsForTable = () => {
         <AppBar position="fixed">
         {active ? 
             <>
-            <CloseIcon className={classes.btn} onClick={handleClick}/>
+            <CloseIcon className={classes.btn} onClick={handleClick} fontSize='large'/>
             <ul
             className={classes.tabs}
             value={value}
@@ -72,7 +72,7 @@ const NavTabsForTable = () => {
             {MenuItems.map((item) => <li key={item.id} className={classes.tab}><Link className={classes.link} to={item.element} spy={true} smooth={true}>{item.name}</Link></li>)}
             </ul>
             </>
-        : <DehazeIcon className={classes.btn} onClick={handleClick} />}
+        : <DehazeIcon className={classes.btn} onClick={handleClick} fontSize='large'/>}
 
         </AppBar>
 

@@ -1,3 +1,4 @@
+// All data here.
 export const MenuItems = [
     {
         id: 1,

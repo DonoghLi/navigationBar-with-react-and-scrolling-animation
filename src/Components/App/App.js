@@ -1,10 +1,17 @@
+// External Dependencies
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { useMediaQuery } from 'react-responsive';
+
+// Internal Dependencies
 import NavTabs from '../Navbar/Navbar';
 import NavTabsForTable from '../Navbar/NavTabsForTable';
+
+// Local Dependencies
 import './App.css';
 
+// MUI styles.
+// Change here to some style methods you prefer.
 const useStyles = makeStyles(() => ({
   root: {
     position: 'absolute',
@@ -21,9 +28,13 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function App() {
+
+// Component Defination
+const App = () => {
   const classes = useStyles();
 
+  // Define two mediaquery here for laptop and table.
+  // Change it to whatever you prefer.
   const isTabletDevice = useMediaQuery({
     query: "(min-device-width: 680px)",
   });

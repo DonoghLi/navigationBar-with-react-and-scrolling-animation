@@ -1,11 +1,16 @@
+// External Dependencies
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import CloseIcon from '@material-ui/icons/Close';
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-scroll';
+
+// Local Dependencies
 import { MenuItems } from './MenuItems';
 
+// MUI styles.
+// Change here to some style methods you prefer.
 const useStyles = makeStyles(() => ({
   root: {
     opacity: '0.5',
@@ -40,6 +45,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
+// Component Defination
 const NavTabsForTable = () => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
@@ -49,30 +55,30 @@ const NavTabsForTable = () => {
     setValue(newValue);
   };
 
+  // Control button open or close.
   const handleClick = () => {
-    console.log(active);
     setActive(!active);
-
   }
 
   return (
     <div className={classes.root}>
-        
-
         <AppBar position="fixed">
-        {active ? 
-            <>
-            <CloseIcon className={classes.btn} onClick={handleClick} fontSize='large'/>
-            <ul
-            className={classes.tabs}
-            value={value}
-            onChange={handleChange}
-            aria-label="nav tabs example"
-            >
-            {MenuItems.map((item) => <li key={item.id} className={classes.tab}><Link className={classes.link} to={item.element} spy={true} smooth={true}>{item.name}</Link></li>)}
-            </ul>
-            </>
-        : <DehazeIcon className={classes.btn} onClick={handleClick} fontSize='large'/>}
+          {active ? 
+              <>
+              <CloseIcon className={classes.btn} onClick={handleClick} fontSize='large'/>
+              <ul
+              className={classes.tabs}
+              value={value}
+              onChange={handleChange}
+              aria-label="nav tabs example"
+              >
+              {MenuItems.map((item) => 
+                <li key={item.id} className={classes.tab}>
+                  <Link className={classes.link} to={item.element} spy={true} smooth={true}>{item.name}</Link>
+                </li>)}
+              </ul>
+              </>
+          : <DehazeIcon className={classes.btn} onClick={handleClick} fontSize='large'/>}
 
         </AppBar>
 

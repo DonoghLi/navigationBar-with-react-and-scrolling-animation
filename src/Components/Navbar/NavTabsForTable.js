@@ -9,11 +9,16 @@ import { Link } from 'react-scroll';
 // Local Dependencies
 import { MenuItems } from './MenuItems';
 
+
 // MUI styles.
 // Change here to some style methods you prefer.
 const useStyles = makeStyles(() => ({
   root: {
-    opacity: '0.5',
+
+  },
+  appbar: {
+    width: '20%',
+    right: '0',
   },
   tabs: {
     width: '100%',
@@ -23,7 +28,7 @@ const useStyles = makeStyles(() => ({
     position: 'relative',
   },
   tab: {
-    width: '10%',
+    // width: '10%',
     position: 'relative',
     margin: '0 auto',
     padding: '10px 0',
@@ -39,9 +44,14 @@ const useStyles = makeStyles(() => ({
     },
   },
   btn: {
-      position: 'absolute',
+      position: 'fixed',
       color: 'black',
-      zIndex: '10000',
+      zIndex: '100000',
+      paddingLeft: '10px',
+      right: '0',
+      '&:hover': {
+        color: 'orange',
+      },
   }
 }));
 
@@ -62,7 +72,7 @@ const NavTabsForTable = () => {
 
   return (
     <div className={classes.root}>
-        <AppBar position="fixed">
+        <AppBar position="fixed" className={classes.appbar}>
           {active ? 
               <>
               <CloseIcon className={classes.btn} onClick={handleClick} fontSize='large'/>

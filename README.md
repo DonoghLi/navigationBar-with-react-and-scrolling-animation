@@ -20,4 +20,5 @@ And this component includes **navigation bar**, **scrolling animations** and **r
 ### How is it like?
 
 ![navbar show 1](https://user-images.githubusercontent.com/55764521/120723692-ce807c00-c504-11eb-81ec-b0b05be88222.gif)
-![navbar show 2](https://user-images.githubusercontent.com/55764521/120723694-d0e2d600-c504-11eb-9db1-6f3918b7c561.gif)
+![navbar show 2](https://user-images.githubusercontent.com/55764521/121618507-7663ef80-ca99-11eb-8b4a-449c6eb3d0ad.gif)
+
